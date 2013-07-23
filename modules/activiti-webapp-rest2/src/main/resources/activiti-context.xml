@@ -9,9 +9,9 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<bean id="demoDataGenerator" class="org.activiti.rest.demo.DemoDataGenerator"
 		init-method="init">
 		<property name="processEngine" ref="processEngine" />
-		<property name="createDemoUsersAndGroups" value="true" />
-        <property name="createDemoProcessDefinitions" value="true" />
-        <property name="createDemoModels" value="true" />
+		<property name="createDemoUsersAndGroups" value="false" />
+        <property name="createDemoProcessDefinitions" value="false" />
+        <property name="createDemoModels" value="false" />
 	</bean>
 
 	<bean id="dbProperties"
@@ -21,13 +21,9 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		<property name="ignoreUnresolvablePlaceholders" value="true" />
 	</bean>
 
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-		<property name="driverClass" value="${jdbc.driver}" />
-		<property name="url" value="${jdbc.url}" />
-		<property name="username" value="${jdbc.username}" />
-		<property name="password" value="${jdbc.password}" />
-	</bean>
+        <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+                <property name="jndiName" value="java:jboss/datasources/ActivitiDS"/>
+        </bean>
 
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
