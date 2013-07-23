@@ -87,6 +87,7 @@ import org.activiti.rest.api.repository.DeploymentResource;
 import org.activiti.rest.api.repository.DeploymentResourceCollectionResource;
 import org.activiti.rest.api.repository.DeploymentResourceDataResource;
 import org.activiti.rest.api.repository.DeploymentResourceResource;
+import org.activiti.rest.api.repository.DeploymentsNewResource;
 import org.activiti.rest.api.repository.ModelCollectionResource;
 import org.activiti.rest.api.repository.ModelResource;
 import org.activiti.rest.api.repository.ModelSourceExtraResource;
@@ -136,6 +137,8 @@ import org.restlet.routing.Router;
 public class RestServicesInit {
 
   public static void attachResources(Router router) {
+    
+    router.attach("/repository/deployments/new", DeploymentsNewResource.class);
     
     // New REST-urls
     router.attach("/repository/deployments", DeploymentCollectionResource.class);

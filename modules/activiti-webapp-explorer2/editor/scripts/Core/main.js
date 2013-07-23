@@ -448,11 +448,11 @@ ORYX.Editor = {
                 "</div>" + 
               "</div>";
 			
-			if( headerPanel.body ){
+			/*if( headerPanel.body ){
 				headerPanel.body.dom.innerHTML = content;
 			} else {
 				headerPanel.html = content
-			}
+			}*/
 		};	
 		
 		ORYX.Editor.Cookie.onChange(fn);
