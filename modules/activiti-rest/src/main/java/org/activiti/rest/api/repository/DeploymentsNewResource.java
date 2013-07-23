@@ -38,7 +38,6 @@ import org.activiti.engine.impl.db.DbSqlSession;
 import org.activiti.engine.impl.persistence.entity.ResourceEntityManager;
 import org.activiti.engine.query.QueryProperty;
 import org.activiti.engine.repository.*;
-import org.activiti.explorer.reporting.ReportingUtil;
 import org.activiti.rest.api.ActivitiUtil;
 import org.activiti.rest.api.DataResponse;
 import org.activiti.rest.api.SecuredResource;
