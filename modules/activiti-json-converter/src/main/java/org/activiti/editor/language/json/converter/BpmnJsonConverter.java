@@ -309,6 +309,11 @@ public class BpmnJsonConverter implements EditorJsonConstants, StencilConstants,
       if (processNameNode != null && StringUtils.isNotEmpty(processNameNode.asText())) {
         process.setName(processNameNode.asText());
       }
+
+      JsonNode processDocumentationNode = modelNode.get(EDITOR_SHAPE_PROPERTIES).get(PROPERTY_DOCUMENTATION);
+      if (processDocumentationNode != null && StringUtils.isNotEmpty(processDocumentationNode.asText())) {
+        process.setDocumentation(processDocumentationNode.asText());
+      }
       
       processJsonElements(shapesArrayNode, modelNode, process, shapeMap);
     }
