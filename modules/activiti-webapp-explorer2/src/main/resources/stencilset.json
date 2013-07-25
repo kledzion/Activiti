@@ -190,12 +190,18 @@
           "refToView" : ""
         }, {
           "id" : "c4",
+          "title" : "Double",
+          "title_de" : "Double",
+          "value" : "double",
+          "refToView" : ""
+        }, {
+          "id" : "c5",
           "title" : "Boolean",
           "title_de" : "Boolean",
           "value" : "boolean",
           "refToView" : ""
         }, {
-          "id" : "c5",
+          "id" : "c6",
           "title" : "Enum",
           "title_de" : "Enum",
           "value" : "enum",
@@ -685,6 +691,27 @@
         "value" : "Conditional",
         "icon" : "connector/list/type.expression.png",
         "refToView" : "conditional"
+      } ]
+    } ]
+  }, {
+    "name" : "cancelactivityattribute",
+    "properties" : [ {
+      "id" : "cancelactivity",
+      "type" : "Choice",
+      "title" : "Cancel activity",
+      "value" : "yes",
+      "description" : "Define activity cancelation",
+      "popular" : true,
+      "items" : [ {
+        "id" : "yes",
+        "title" : "Yes",
+        "title_de" : "Yes",
+        "value" : "yes"
+      }, {
+        "id" : "no",
+        "title" : "No",
+        "title_de" : "No",
+        "value" : "no"
       } ]
     } ]
   }, {
@@ -1210,7 +1237,7 @@
     "view" : "intermediateevent/timer.svg",
     "icon" : "catching/timer.png",
     "groups" : [ "Boundary Events" ],
-    "propertyPackages" : [ "elementbase", "baseattributes", "timerdefinition" ],
+    "propertyPackages" : [ "elementbase", "baseattributes", "cancelactivityattribute", "timerdefinition" ],
     "roles" : [ "sequence_start", "BoundaryEventsMorph", "IntermediateEventOnActivityBoundary" ]
   }, {
     "type" : "node",
